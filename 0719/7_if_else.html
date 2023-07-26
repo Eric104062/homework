@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if else</title>
+</head>
+<style>
+    .black {
+        color: black;
+    }
+    .yellow {
+        color: yellow;
+    }
+    .red {
+        color: red;
+    }
+    .white {
+        color: white;
+    }
+</style>
+<body>
+    <label for="weather">Select the color: </label>
+    <select id="weather">
+        <option value="">--Make a choice--</option>
+        <option value="black">black</option>
+        <option value="yellow">yellow</option>
+        <option value="red">red</option>
+        <option value="white">white</option>
+    </select>
+
+    <p></p>
+
+</body>
+<script>
+    var select = document.querySelector("select");
+    var para = document.querySelector("p");
+
+    select.addEventListener("change", setColor);
+
+    function setColor() {
+        var choice = select.value;
+        
+        if (choice === "yellow") {
+            para.textContentc = "yellow";
+            para.className = "yellow";
+        } else if (choice === "black") {
+            para.textContent = "black";
+            para.className = "black";
+        } else if (choice === "red") {
+            para.textContent = "red";
+            para.className = "red";
+        } else if (choice === "white") {
+            para.textContent = "white";
+            para.className = "white";
+        } else {
+            para.textContent = "";
+        }
+    }
+
+</script>
+</html>

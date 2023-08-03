@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebRTC</title>
+</head>
+<body>
+
+    <video id="localVideo" autoplay playsinline controls="false"/>
+    <video id="remoteVideo" autoplay playsinline controls="false"/>
+    <select id="availableCameras"></select>
+    
+</body>
+    <script src="https://js.pusher.com/8.2.0/pusher.min.js"></script>
+    <script>
+//         //開始使用媒體裝置
+//         const constraints = {
+//             'video': true,
+//             'audio': true
+//         }
+//         navigator.mediaDevices.getUserMedia(constraints) //查詢使用者的裝置
+//             .then(stream => {
+//                 console.log('Got MediaStream:', stream);
+//             })
+//             .catch(error => {
+//                 console.error('Error accessing media devices.', error);
+//             });
+// ///////////////////////////////////////////////////////////////////////////////////////////////////////
+//         //監聽裝置變更
+//         async function updateCameraList(type) {
+//             // 搜尋新裝置
+//             const devices = await navigator.mediaDevices.enumerateDevices();
+//             cameras = devices.filter(device => device.kind === type);
+//             // 把裝置加到表單中
+//             const listElement = document.querySelector('select#availableCameras');
+//             listElement.innerHTML = '';
+//             cameras.map(camera => {
+//                 const cameraOption = document.createElement('option');
+//                 cameraOption.label = camera.label;
+//                 cameraOption.value = camera.deviceId;
+//                 listElement.appendChild(cameraOption)
+//             })
+//         }
+
+//         // 載入第一次更新裝置表單
+//         updateCameraList('videoinput')
+       
+//         // 監聽裝置是否變動
+//         navigator.mediaDevices.addEventListener('devicechange', event => {
+//             updateCameraList('videoinput');
+//         });
+// ///////////////////////////////////////////////////////////////////////////////////////////////////////
+//     // 設定裝置的限制條件
+//     const constraints = {
+//             'audio': {'echoCancellation': true}, // 啟動回音消除功能
+//             'video': {
+//                 'width': {'min': 640}, // 最小寬度
+//                 'height': {'min': 480} //最小高度
+//                 }
+//             }
+
+//     // 在本地上撥放
+//     async function playVideoFromCamera(){
+//         try{
+//             const stream = await navigator.mediaDevices.getUserMedia(constraints);
+//             const videoElement = document.querySelector('video#localVideo');
+//             videoElement.srcObject = stream
+//         }catch(error){
+//             console.log(error)
+//         }
+//     }
+
+//     playVideoFromCamera()
+// ///////////////////////////////////////////////////////////////////////////////////////////////////////
+
+    
+    </script>
+</html>
